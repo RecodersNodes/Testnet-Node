@@ -49,8 +49,6 @@ echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile
 source ~/.bash_profile
 go version
 
-rm go1.18.1.linux-amd64.tar.gz
-
 echo -e "\e[1m\e[32m3. Mengclone... \e[0m" && sleep 1
 # download binary
 cd $HOME
