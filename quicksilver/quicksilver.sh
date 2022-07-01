@@ -39,10 +39,14 @@ sudo apt install make clang pkg-config libssl-dev build-essential git jq llvm li
 
 echo -e "\e[1m\e[32m2. Menginstall Golang... \e[0m" && sleep 1
 # install go
-wget https://go.dev/dl/go1.18.1.linux-amd64.tar.gz
-sudo tar -xvf go1.18.1.linux-amd64.tar.gz && sudo mv go /usr/local
+ver="1.18.1"
+cd $HOME
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
+sudo rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
+rm "go$ver.linux-amd64.tar.gz"
 echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile
-source ~/.bash_profile 
+source ~/.bash_profile
 go version
 
 rm go1.18.1.linux-amd64.tar.gz
