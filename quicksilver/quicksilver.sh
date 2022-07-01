@@ -29,22 +29,23 @@ sleep 2
 
 echo -e "\e[1m\e[32m1. Lagi Update... \e[0m" && sleep 1
 # update
-sudo apt update -y
-sudo apt upgrade -y
-sudo apt autoremove -y
+sudo apt update && sudo apt upgrade -y
 
 echo -e "\e[1m\e[32m2. Menginstall Pendukung... \e[0m" && sleep 1
 # packages
-sudo apt install make clang pkg-config libssl-dev build-essential git jq llvm libudev-dev -y
+sudo apt install make gcc tmux wget curl clang pkg-config libssl-dev build-essential git jq llvm libudev-dev -y
 
 echo -e "\e[1m\e[32m2. Menginstall Golang... \e[0m" && sleep 1
 # install go
-wget https://go.dev/dl/go1.18.1.linux-amd64.tar.gz \
-&& sudo tar -xvf go1.18.1.linux-amd64.tar.gz && sudo mv go /usr/local \
-&& echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile \
-&& source ~/.bash_profile; go version
-
-rm go1.18.1.linux-amd64.tar.gz
+ver="1.18.2"
+cd $HOME
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
+sudo rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
+rm "go$ver.linux-amd64.tar.gz"
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile
+source ~/.bash_profile
+go version
 
 echo -e "\e[1m\e[32m3. Mengclone... \e[0m" && sleep 1
 # download binary
@@ -52,7 +53,8 @@ cd $HOME
 rm quicksilver -rf
 git clone https://github.com/ingenuity-build/quicksilver.git --branch v0.4.0
 cd quicksilver
-make install
+make build
+sudo chmod +x ./build/quicksilverd && sudo mv ./build/quicksilverd /usr/local/bin/quicksilverd
 
 # config
 quicksilverd config chain-id $QUICKSILVER_CHAIN_ID
