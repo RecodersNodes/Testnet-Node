@@ -60,7 +60,7 @@ sudo mv ~/go/bin/icad /usr/local/bin
 icad config chain-id $ICAD_CHAIN_ID
 
 # init
-icad init $NODENAME --chain-id $QUICKSILVER_CHAIN_ID
+icad init $NODENAME --chain-id $ICAD_CHAIN_ID
 
 # download genesis and addrbook
 wget -qO $HOME/.ica/config/genesis.json "https://raw.githubusercontent.com/ingenuity-build/testnets/main/killerqueen/kqcosmos-1/genesis.json"
