@@ -29,7 +29,8 @@ sleep 2
 
 echo -e "\e[1m\e[32m1. Lagi Update... \e[0m" && sleep 1
 # update
-sudo apt update && sudo apt upgrade -y
+sudo apt update -y
+sudo apt upgrade -y
 sudo apt autoremove -y
 
 echo -e "\e[1m\e[32m2. Menginstall Pendukung... \e[0m" && sleep 1
@@ -40,7 +41,7 @@ echo -e "\e[1m\e[32m2. Menginstall Golang... \e[0m" && sleep 1
 # install go
 wget https://go.dev/dl/go1.18.1.linux-amd64.tar.gz
 sudo tar -xvf go1.18.1.linux-amd64.tar.gz && sudo mv go /usr/local
-&& echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile
 source ~/.bash_profile 
 go version
 
