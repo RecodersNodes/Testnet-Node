@@ -56,7 +56,6 @@ rm quicksilver -rf
 git clone https://github.com/ingenuity-build/quicksilver.git --branch v0.4.0
 cd quicksilver
 make install
-sudo mv ~go/bin/quicksilverd /usr/local/bin/quicksilverd
 
 # config
 quicksilverd config chain-id $QUICKSILVER_CHAIN_ID
