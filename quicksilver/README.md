@@ -80,7 +80,7 @@
 <p dir="auto">kalau ga muncul berarti node lu belom sync biar cepet pake state sync atau snapshot ( Pilih Salah Satu Jangan Semua)</p>
 </blockquote>
 <p dir="auto">pake statesync dari <a href="https://www.theamsolutions.info/quicksilver-service" rel="nofollow">theamsolutions</a> :</p>
-<pre class="notranslate">quicksilverd tendermint unsafe-reset-all --home $HOME/.quicksilverd
+<pre class="notranslate"><code>quicksilverd tendermint unsafe-reset-all --home $HOME/.quicksilverd
 
 SNAP_RPC1="https://quicksilver-rpc.theamsolutions.info:443" \
 SNAP_RPC2="https://quicksilver-rpc.theamsolutions.info:443"
@@ -99,10 +99,36 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.quicksilv
 <blockquote>
 <p dir="auto"> pake command Ini Kalau Udah Ke Sync biar ga ke restart </p>
 </blockquote>
-<pre class="notranslate">sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOME/.quicksilverd/config/config.toml
+<pre class="notranslate"><code>sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOME/.quicksilverd/config/config.toml
 </code></pre>
+<p dir="auto">pake snapshot dari <a href="https://www.theamsolutions.info/quicksilver-service" rel="nofollow">Theamsolutions</a> :</p>
+<pre class="notranslate"><code>sudo systemctl stop quicksilverd.service
+
+quicksilverd tendermint unsafe-reset-all --home $HOME/.quicksilverd
+
+pruning="custom"; \
+pruning_keep_recent="100"; \
+pruning_keep_every="0"; \
+pruning_interval="10"; \
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.quicksilverd/config/app.toml; \
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.quicksilverd/config/app.toml; \
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.quicksilverd/config/app.toml; \
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.quicksilverd/config/app.toml
+
+cd $HOME/.quicksilverd; rm -rf data \
+&& wget http://185.187.169.194/snap-111460.tar  #(Cuma 3.2 GB )
+
+tar xvf snap-111460.tar
+
+wget -q -O $HOME/.quicksilverd/config/addrbook.json wget http://185.187.169.194/addrbook.json
+
+sudo systemctl restart quicksilverd.service && sudo journalctl -u quicksilverd.service -f -o cat </code></pre>
+<blockquote>
+<p dir="auto"> pake command Ini Kalau Udah Ke Sync Biar Ga menuhin Disk </p>
+</blockquote>
+<pre class="notranslate"><code>rm $HOME/.quicksilverd/snap-111460.tar </code></pre>
 <p dir="auto">pake snapshot dari <a href="https://snapshot.testnet.run" rel="nofollow">Testnet Run</a> :</p>
-<pre class="notranslate">quicksilverd tendermint unsafe-reset-all
+<pre class="notranslate"><code>quicksilverd tendermint unsafe-reset-all
 
 rm -rf $HOME/.quicksilverd/data/*
 
