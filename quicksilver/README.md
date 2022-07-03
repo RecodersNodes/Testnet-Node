@@ -2,7 +2,7 @@
   <a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/50621007/166148846-93575afe-e3ce-4ca5-a3f7-a21e8a8609cb.png"><img height="100" src="https://user-images.githubusercontent.com/50621007/166148846-93575afe-e3ce-4ca5-a3f7-a21e8a8609cb.png" style="max-width: 100%;"></a>
 </p>
 
-<h1 dir="auto"><a id="user-content-quicksilver-node-setup-for-testnet--killerqueen-1" class="anchor" aria-hidden="true" href="#quicksilver-node-setup-for-testnet--killerqueen-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Cara Menjalankan Node Quicksilver Testnet — killerqueen-1</h1>
+<h1 dir="auto"><a id="user-content-cara-menjalankan-node-quicksilver--killerqueen-1" class="anchor" aria-hidden="true" href="#cara-menjalankan-node-quicksilver--killerqueen-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Cara Menjalankan Node Quicksilver Testnet — killerqueen-1</h1>
 
 <p dir="auto">Dokumen Asli:</p>
 
@@ -29,14 +29,14 @@
 <li>Permanent Internet connection (Internet Harus Kenceng Sudah Pasti Inet VPS kenceng)</li>
 </ul>
 
-<h3 dir="auto"><a id="user-content-recommended-hardware-requirements" class="anchor" aria-hidden="true" href="#recommended-hardware-requirements"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Rekomendasi Spek</h3>
+<h3 dir="auto"><a id="user-content-recommended-hardware-requirements" class="anchor" aria-hidden="true" href="#recommedasi-spek"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Rekomendasi Spek</h3>
 <ul dir="auto">
 <li>4x CPUs; the faster clock speed the better</li>
 <li>8GB RAM</li>
 <li>200GB of storage (SSD atau NVME)</li>
 <li>Permanent Internet connection (Internet Harus Kenceng Sudah Pasti Inet VPS kenceng)</li>
 </ul>
-<h2 dir="auto"><a id="user-content-set-up-your-quicksilver-fullnode" class="anchor" aria-hidden="true" href="#set-up-your-quicksilver-fullnode"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Set up your quicksilver fullnode</h2>
+<h2 dir="auto"><a id="user-content-set-up-your-quicksilver-fullnode" class="anchor" aria-hidden="true" href="#setting-fullnode"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>setting full node</h2>
 <h3 dir="auto"><a id="user-content-option-1-automatic" class="anchor" aria-hidden="true" href="#option-1-automatic"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Otomatis</h3>
 <p dir="auto">Lu bisa setup otomatis menggunakan skrip dibawah ini dengan sat set sat set.</p>
 <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>wget -O quicksilver.sh https://raw.githubusercontent.com/ApizGans/Testnet-Node/main/quicksilver/quicksilver.sh &amp;&amp; chmod +x quicksilver.sh &amp;&amp; ./quicksilver.sh
@@ -66,7 +66,7 @@
 <pre class="notranslate"><code>quicksilverd keys list
 </code></pre>
 <h3 dir="auto"><a id="user-content-fund-your-wallet" class="anchor" aria-hidden="true" href="#fund-your-wallet"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Isi Wallet Lu biar bisa buat validator</h3>
-<p dir="auto">masuk discordnya dulu link ada di twitternya gausah manja lo. kalau udah masuk faucet ke channel dibawah ini</p>
+<p dir="auto">masuk discordnya dulu link https://discord.gg/gTKFCbaP3C. kalau udah masuk faucet ke channel dibawah ini</p>
 <ul dir="auto">
 <li><strong>#qck-tap</strong> buat QCK</li>
 <li><strong>#atom-tap</strong> buat ATOM</li>
@@ -77,8 +77,36 @@
 <pre class="notranslate"><code>quicksilverd query bank balances $QUICKSILVER_WALLET_ADDRESS
 </code></pre>
 <blockquote>
-<p dir="auto">kalau ga muncul berarti node lu belom sync</p>
+<p dir="auto">kalau ga muncul berarti node lu belom sync biar cepet pake state sync atau snapshot ( Pilih Salah Satu Jangan Semua)</p>
 </blockquote>
+<p dir="auto">pake statesync dari <a href="https://www.theamsolutions.info/quicksilver-service" rel="nofollow">theamsolutions</a> :</p>
+<pre class="notranslate">quicksilverd tendermint unsafe-reset-all --home $HOME/.quicksilverd
+
+SNAP_RPC1="https://quicksilver-rpc.theamsolutions.info:443" \
+SNAP_RPC2="https://quicksilver-rpc.theamsolutions.info:443"
+
+LATEST_HEIGHT=$(curl -s $SNAP_RPC2/block | jq -r .result.block.header.height); \
+BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
+TRUST_HASH=$(curl -s "$SNAP_RPC2/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+
+echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC1,$SNAP_RPC2\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.quicksilverd/config/config.toml
+</code></pre>
+
+<p dir="auto">pake snapshot dari <a href="https://snapshot.testnet.run" rel="nofollow">Testnet Run</a> :</p>
+<pre class="notranslate">quicksilverd tendermint unsafe-reset-all
+
+rm -rf $HOME/.quicksilverd/data/*
+
+URL="https://snapshot.testnet.run/testnet/quicksilver/killerqueen-1_2022-07-02.tar"
+
+wget -O - $URL | tar -xvf - -C $HOME/.quicksilverd/data
+</code></pre>
+<h2 dir="auto"><a id="user-content-usefull-commands" class="anchor" aria-hidden="true" href="#usefull-commands"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Kumpulan Command</h2>
 <p dir="auto">command buat validator:</p>
 <pre class="notranslate"><code>quicksilverd tx staking create-validator \
   --amount 1000000uqck \
@@ -91,7 +119,6 @@
   --moniker $NODENAME \
   --chain-id $QUICKSILVER_CHAIN_ID
 </code></pre>
-<h2 dir="auto"><a id="user-content-usefull-commands" class="anchor" aria-hidden="true" href="#usefull-commands"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Kumpulan Command</h2>
 <p dir="auto">Cek Log</p>
 <pre class="notranslate"><code>journalctl -fu quicksilverd -o cat
 </code></pre>
