@@ -14,7 +14,7 @@
         <li>Storage: 300GB </li>
     </ul>
     
-    <p dir="auto">Pake Command Dibawah untuk otomatis sat set sat set:</p>
+<p dir="auto">Pake Command Dibawah untuk otomatis sat set sat set:</p>
 <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>wget -qO aptos.sh https://github.com/ApizGans/Testnet-Node/blob/main/aptos/aptos.sh &amp;&amp; chmod +x aptos.sh &amp;&amp; ./aptos.sh
     </code></pre><div class="zeroclipboard-container position-absolute right-0 top-0">
         <clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0 tooltipped-no-delay" data-copy-feedback="Copied!" data-tooltip-direction="w" value="wget -qO aptos.sh https://github.com/ApizGans/Testnet-Node/blob/main/aptos/aptos.sh &amp;&amp; chmod +x aptos.sh &amp;&amp; ./aptos.sh" tabindex="0" role="button" style="display: none;">
