@@ -51,7 +51,7 @@ echo -e "\e[1m\e[32m3. Mengclone... \e[0m" && sleep 1
 # download binary
 cd $HOME
 rm quicksilver -rf
-git clone https://github.com/ingenuity-build/quicksilver.git --branch v0.4.0
+git clone https://github.com/ingenuity-build/quicksilver.git --branch v0.4.1
 cd quicksilver
 make build
 sudo chmod +x ./build/quicksilverd && sudo mv ./build/quicksilverd /usr/local/bin/quicksilverd
@@ -84,17 +84,6 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 
-SNAP_RPC="https://quicksilver-testnet-rpc.polkachu.com:443"
-
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
-TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
-
-sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
-s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.quicksilverd/config/config.toml
 # set peers and seeds
 seeds=dd3460ec11f78b4a7c4336f22a356fe00805ab64@seed.killerqueen-1.quicksilver.zone:26656,8603d0778bfe0a8d2f8eaa860dcdc5eb85b55982@seed02.killerqueen-1.quicksilver.zone:27676 \
 && sed -i "s/^seeds *=.*/seeds = \"$seeds\"/;" $HOME/.quicksilverd/config/config.toml
@@ -109,6 +98,4 @@ sudo systemctl enable quicksilverd
 sudo systemctl restart quicksilverd
 
 echo '=============== Selamat Anda Jadi Heker  ==================='
-echo -e 'untuk check logs: \e[1m\e[32mjournalctl -u quicksilverd -f -o cat\e[0m'
-echo -e 'Info: \e[1m\e[32mNunggu Sekitar 10-15 menit mungkin\e[0m'
-echo -e 'kalau udah ke commit sync masukan command ini: \e[1m\e[32msed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOME/.quicksilverd/config/config.toml\e[0m'
+echo -e 'untuk check logs: \e[1m\e[32mjournalctl -u quicksilverd -f -o cat\e[0m' 
