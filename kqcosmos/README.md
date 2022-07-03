@@ -84,7 +84,6 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.ica/confi
 <blockquote>
 <p dir="auto"> pake command Ini Kalau Udah Ke Sync biar ga ke restart </p>
 </blockquote>
-<p dir="auto"> pake command Ini Kalau Udah Ke Sync biar ga ke restart </p>
 <pre class="notranslate">sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOME/.ica/config/config.toml 
 </code></pre>
 <p dir="auto">pake snapshot dari <a href="https://snapshot.testnet.run" rel="nofollow">Testnet Run</a> :</p>
