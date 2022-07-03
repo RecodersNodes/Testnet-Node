@@ -56,7 +56,7 @@
 <li><strong>#qck-tap</strong> buat QCK</li>
 <li><strong>#atom-tap</strong> buat ATOM</li>
 </ul>
-<pre class="notranslate"><code>$request &lt;ADDRESS WALLET ELU&gt; killerqueen
+<pre class="notranslate"><code>$request &lt;ADDRESS WALLET ELU&gt; kqcosmos
 </code></pre>
 <p dir="auto">Buat cek balance wallet elo:</p>
 <pre class="notranslate"><code>icad query bank balances $ICAD_WALLET_ADDRESS
@@ -64,6 +64,29 @@
 <blockquote>
 <p dir="auto">kalau ga muncul berarti node lu belom sync biar cepet pake state sync atau snapshot ( Pilih Salah Satu Jangan Semua)</p>
 </blockquote>
+<p dir="auto">pake State Sync</a> :</p>
+<pre class="notranslate"> icad tendermint unsafe-reset-all --home ~/.ica/
+
+SNAP_RPC1="http://157.90.179.182:28657" \
+&& SNAP_RPC2="http://157.90.179.182:28657"
+
+LATEST_HEIGHT=$(curl -s $SNAP_RPC2/block | jq -r .result.block.header.height) \
+&& BLOCK_HEIGHT=$((LATEST_HEIGHT - 300)) \
+&& TRUST_HASH=$(curl -s "$SNAP_RPC2/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+
+echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC1,$SNAP_RPC2\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.ica/config/config.toml
+</code></pre>
+<blockquote>
+<p dir="auto"> pake command Ini Kalau Udah Ke Sync biar ga ke restart </p>
+</blockquote>
+<p dir="auto"> pake command Ini Kalau Udah Ke Sync biar ga ke restart </p>
+<pre class="notranslate">sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOME/.ica/config/config.toml 
+</code></pre>
 <p dir="auto">pake snapshot dari <a href="https://snapshot.testnet.run" rel="nofollow">Testnet Run</a> :</p>
 <pre class="notranslate">icad tendermint unsafe-reset-all
 
