@@ -90,7 +90,7 @@ echo 'export SEI_VALOPER_ADDRESS='${SEI_VALOPER_ADDRESS} &gt;&gt; $HOME/.bash_pr
 source $HOME/.bash_profile
 </code></pre>
 <h3 dir="auto"><a id="user-content-fund-your-wallet" class="anchor" aria-hidden="true" href="#fund-your-wallet"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Isi Wallet Lu biar bisa buat validator</h3>
-<p dir="auto">masuk discordnya dulu link ada di twitternya gausah manja lo. kalau udah masuk faucet ke channel dibawah ini</p>
+<p dir="auto">masuk discordnya dulu link ada di twitternya. kalau udah masuk faucet ke channel dibawah ini</p>
 <ul dir="auto">
 <li><strong>#testnet-faucet</strong> buat SEI</li>
 </ul>
@@ -104,7 +104,7 @@ source $HOME/.bash_profile
 </blockquote>
 <p dir="auto">command buat validator:</p>
 <pre class="notranslate"><code>seid tx staking create-validator \
-  --amount 1000000uqck \
+  --amount 1000000usei \
   --from $WALLET \
   --commission-max-change-rate "0.01" \
   --commission-max-rate "0.2" \
@@ -146,10 +146,10 @@ source $HOME/.bash_profile
 <pre class="notranslate"><code>seid tx gov vote 1 yes --from $WALLET --chain-id=$SEI_CHAIN_ID
 </code></pre>
 <p dir="auto">Delegate stake</p>
-<pre class="notranslate"><code>seid tx staking delegate $SEI_VALOPER_ADDRESS 10000000uqck --from=$WALLET --chain-id=$SEI_CHAIN_ID --gas=auto
+<pre class="notranslate"><code>seid tx staking delegate $SEI_VALOPER_ADDRESS 10000000usei --from=$WALLET --chain-id=$SEI_CHAIN_ID --gas=auto
 </code></pre>
 <p dir="auto">Redelegate stake</p>
-<pre class="notranslate"><code>seid tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 10000000uqck --from=$WALLET --chain-id=$SEI_CHAIN_ID --gas=auto
+<pre class="notranslate"><code>seid tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 10000000usei --from=$WALLET --chain-id=$SEI_CHAIN_ID --gas=auto
 </code></pre>
 <p dir="auto">Withdraw semua rewards</p>
 <pre class="notranslate"><code>seid tx distribution withdraw-all-rewards --from=$WALLET --chain-id=$SEI_CHAIN_ID --gas=auto

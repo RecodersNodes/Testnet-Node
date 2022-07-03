@@ -133,16 +133,16 @@ wget -O - $URL | tar -xvf - -C $HOME/.ica/data
 <pre class="notranslate"><code>icad tendermint show-node-id
 </code></pre>
 <p dir="auto">Kirim Token</p>
-<pre class="notranslate"><code>icad tx bank send $ICAD_WALLET_ADDRESS <TO_ICAD_WALLET_ADDRESS> <JUMLAHTOKEN>uqck
+<pre class="notranslate"><code>icad tx bank send $ICAD_WALLET_ADDRESS <TO_ICAD_WALLET_ADDRESS> <JUMLAHTOKEN>uatom
 </code></pre>
 <p dir="auto">Voting</p>
 <pre class="notranslate"><code>icad tx gov vote 1 yes --from $WALLET --chain-id=$ICAD_CHAIN_ID
 </code></pre>
 <p dir="auto">Delegate stake</p>
-<pre class="notranslate"><code>icad tx staking delegate $ICAD_VALOPER_ADDRESS 10000000uqck --from=$WALLET --chain-id=$ICAD_CHAIN_ID --gas=auto
+<pre class="notranslate"><code>icad tx staking delegate $ICAD_VALOPER_ADDRESS 10000000uatom --from=$WALLET --chain-id=$ICAD_CHAIN_ID --gas=auto
 </code></pre>
 <p dir="auto">Redelegate stake</p>
-<pre class="notranslate"><code>icad tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 10000000uqck --from=$WALLET --chain-id=$ICAD_CHAIN_ID --gas=auto
+<pre class="notranslate"><code>icad tx staking redelegate <srcValidatorAddress> <destValidatorAddress> 10000000uatom --from=$WALLET --chain-id=$ICAD_CHAIN_ID --gas=auto
 </code></pre>
 <p dir="auto">Withdraw semua rewards</p>
 <pre class="notranslate"><code>icad tx distribution withdraw-all-rewards --from=$WALLET --chain-id=$ICAD_CHAIN_ID --gas=auto
