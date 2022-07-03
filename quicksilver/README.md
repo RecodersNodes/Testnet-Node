@@ -96,7 +96,11 @@ s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC1,$SNAP_RPC2\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.quicksilverd/config/config.toml
 </code></pre>
-
+<blockquote>
+<p dir="auto"> pake command Ini Kalau Udah Ke Sync biar ga ke restart </p>
+</blockquote>
+<pre class="notranslate">sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOME/.quicksilverd/config/config.toml
+</code></pre>
 <p dir="auto">pake snapshot dari <a href="https://snapshot.testnet.run" rel="nofollow">Testnet Run</a> :</p>
 <pre class="notranslate">quicksilverd tendermint unsafe-reset-all
 
