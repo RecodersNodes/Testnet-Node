@@ -53,7 +53,7 @@ echo -e "\e[1m\e[32m3. Mengclone... \e[0m" && sleep 1
 # download binary
 cd $HOME
 rm quicksilver -rf
-git clone https://github.com/ingenuity-build/quicksilver.git --branch v0.4.1
+git clone https://github.com/ingenuity-build/quicksilver.git --branch v0.4.2
 cd quicksilver
 make build
 sudo chmod +x ./build/quicksilverd && sudo mv ./build/quicksilverd /usr/local/bin/quicksilverd
