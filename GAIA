@@ -1,0 +1,31 @@
+{
+
+  "type": "cosmos",
+
+  "value": {
+
+    "key": "wallet",
+
+    "chain-id": "GAIA",
+
+    "rpc-addr": "http://cosmoshub.strange.love:26657",
+
+    "account-prefix": "cosmos",
+
+    "keyring-backend": "test",
+
+    "gas-adjustment": 1.1,
+
+    "gas-prices": "0.0025uatom",
+
+    "debug": true,
+
+    "timeout": "10s",
+
+    "output-format": "json",
+
+    "sign-mode": "direct"
+
+  }
+
+}
