@@ -8,7 +8,7 @@
 
     "chain-id": "GAIA",
 
-    "rpc-addr": "http://cosmoshub.strange.love:26657",
+    "rpc-addr": "http://stride.stake-take.com:46657",
 
     "account-prefix": "cosmos",
 
