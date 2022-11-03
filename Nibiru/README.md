@@ -61,7 +61,7 @@
 <pre class="notranslate"><code>nibid keys add $WALLET
 </code></pre>
 <p dir="auto">Kalau dah buat sebelumny import aja pake ini</p>
-<pre class="notranslate"><code>nibird keys add $WALLET --recover
+<pre class="notranslate"><code>nibid keys add $WALLET --recover
 </code></pre>
 <p dir="auto">buat cek list wallet</p>
 <pre class="notranslate"><code>nibid keys list
