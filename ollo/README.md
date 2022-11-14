@@ -31,11 +31,11 @@ Seperti jaringan Cosmos yang lain, Speknya Lumayan.
 ### Option 1 (automatic)
 Bisa setup/install otomatis dengan command dibawah ini. nanti bakal muncul input untuk nama node validator!
 ```
-wget -O ollo.sh https://raw.githubusercontent.com/ApizGans/Testnet-Node/main/ollo/ollo.sh && chmod +x ollo.sh && ./ollo.sh
+wget -O ollo.sh https://raw.githubusercontent.com/RecodersNodes/Testnet-Node/main/ollo/ollo.sh && chmod +x ollo.sh && ./ollo.sh
 ```
 
 ### Option 2 (manual)
-Tutorial [manual guide](https://github.com/ApizGans/Testnet-Node/blob/main/ollo/manual_install.md) Jika Mau install manual
+Tutorial [manual guide](https://github.com/RecodersNodes/Testnet-Node/blob/main/ollo/manual_install.md) Jika Mau install manual
 
 ## Post installation
 

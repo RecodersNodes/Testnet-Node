@@ -10,9 +10,6 @@ Official documentation:
 Explorer:
 >-  https://ping-pub.joinloyal.io/loyal/
 
-## Tools yang mungkin berguna
->
-> To migrate your validator to another machine read [Migrate your validator to another machine](https://github.com/kj89/testnet_manuals/blob/main/loyal/migrate_validator.md)
 
 ## Spek VPS Yang Dibutuhkan
 Seperti Jaringan Cosmos-SDK lain
@@ -33,11 +30,9 @@ Seperti Jaringan Cosmos-SDK lain
 ### Option 1 (otomatis)
 bisa install/pasang otomatis menggunakan skrip dibawah ini dengan sat set sat set.
 ```
-wget -O loyal.sh https://github.com/ApizGans/Testnet-Node/blob/main/main/loyal/loyal.sh && chmod +x loyal.sh && ./loyal.sh
+wget -O loyal.sh https://github.com/RecodersNodes/Testnet-Node/blob/main/loyal/loyal.sh && chmod +x loyal.sh && ./loyal.sh
 ```
 
-### Option 2 (manual)
-Kamu Bisa mengikuti [manual guide](https://github.com/ApizGans/Testnet-Node/blob/main/loyal/manual_install.md)  jika mau install node manual
 
 ## installation
 
