@@ -33,11 +33,11 @@ Seperti Jaringan Cosmos-SDK lain
 ### Option 1 (otomatis)
 bisa install/pasang otomatis menggunakan skrip dibawah ini dengan sat set sat set.
 ```
-wget -O loyal.sh https://raw.githubusercontent.com/kj89/testnet_manuals/main/loyal/loyal.sh && chmod +x loyal.sh && ./loyal.sh
+wget -O loyal.sh https://github.com/ApizGans/Testnet-Node/blob/main/main/loyal/loyal.sh && chmod +x loyal.sh && ./loyal.sh
 ```
 
 ### Option 2 (manual)
-Kamu Bisa mengikuti [manual guide](https://github.com/kj89/testnet_manuals/blob/main/loyal/manual_install.md)  jika mau install node manual
+Kamu Bisa mengikuti [manual guide](https://github.com/ApizGans/Testnet-Node/blob/main/loyal/manual_install.md)  jika mau install node manual
 
 ## installation
 
@@ -51,8 +51,8 @@ Selanjutnya Kamu harus memastikan validator Kamu menyinkronkan blok. Kamu dapat 
 loyald status 2>&1 | jq .SyncInfo
 ```
 
-### (OPTIONAL) State-Sync provided by PPNV Service
-You can state sync your node in minutes by running commands below
+### (OPTIONAL) State-Sync provided by polkachu
+Anda dapat menyinkronkan node Anda dalam beberapa menit dengan menjalankan perintah di bawah ini
 ```
 SNAP_RPC="https://loyal-testnet-rpc.polkachu.com:443"
 
@@ -233,12 +233,12 @@ Delete wallet
 loyald keys delete $WALLET
 ```
 
-Get wallet balance
+cek saldo wallet
 ```
 loyald query bank balances $LOYAL_WALLET_ADDRESS
 ```
 
-Transfer funds
+Mentransfer balance
 ```
 loyald tx bank send $LOYAL_WALLET_ADDRESS <TO_LOYAL_WALLET_ADDRESS> 10000000ulyl
 ```
