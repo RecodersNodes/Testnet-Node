@@ -15,25 +15,42 @@ sleep 2
 
 echo -e "\e[1m\e[32m1. Updating packages... \e[0m" && sleep 1
 # update
-sudo apt update && sudo apt upgrade -y
+sudo apt-get update \
+&& sudo apt-get install -y --no-install-recommends \
+tzdata \
+ca-certificates \
+build-essential \
+libssl-dev \
+libclang-dev \
+pkg-config \
+openssl \
+protobuf-compiler \
+cmake
 
 echo -e "\e[1m\e[32m2. Installing dependencies... \e[0m" && sleep 1
 # packages
-sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/v4.23.1/yq_linux_amd64 && chmod +x /usr/local/bin/yq
-sudo apt-get install jq -y
+sudo curl https://sh.rustup.rs -sSf | sh -s -- -y
+source $HOME/.cargo/env
+rustc --version
 
 # download sui binaries
-version=$(wget -qO- https://api.github.com/repos/SecorD0/Sui/releases/latest | jq -r ".tag_name")
-wget -qO- "https://github.com/SecorD0/Sui/releases/download/${version}/sui-linux-amd64-${version}.tar.gz" | sudo tar -C /usr/local/bin/ -xzf -
+cd $HOME
+git clone https://github.com/MystenLabs/sui.git
+cd sui
+git remote add upstream https://github.com/MystenLabs/sui
+git fetch upstream
+git checkout -B testnet --track upstream/testnet
 
 # download and update configs
-mkdir -p $HOME/.sui
-wget -qO $HOME/.sui/fullnode.yaml https://github.com/MystenLabs/sui/raw/main/crates/sui-config/data/fullnode-template.yaml
-wget -qO $HOME/.sui/genesis.blob https://github.com/MystenLabs/sui-genesis/raw/main/testnet/genesis.blob
-yq -i ".db-path = \"$HOME/.sui/db\"" $HOME/.sui/fullnode.yaml
-yq -i '.metrics-address = "0.0.0.0:9184"' $HOME/.sui/fullnode.yaml
-yq -i '.json-rpc-address = "0.0.0.0:9000"' $HOME/.sui/fullnode.yaml
-yq -i ".genesis.genesis-file-location = \"$HOME/.sui/genesis.blob\"" $HOME/.sui/fullnode.yaml
+mkdir $HOME/.sui
+wget -O $HOME/.sui/genesis.blob  https://github.com/MystenLabs/sui-genesis/raw/main/testnet/genesis.blob
+cp $HOME/sui/crates/sui-config/data/fullnode-template.yaml $HOME/.sui/fullnode.yaml
+sed -i.bak "s|db-path:.*|db-path: \"$HOME\/.sui\/db\"| ; s|genesis-file-location:.*|genesis-file-location: \"$HOME\/.sui\/genesis.blob\"| ; s|127.0.0.1|0.0.0.0|" $HOME/.sui/fullnode.yaml
+
+
+cargo build --release --bin sui-node
+mv ~/sui/target/release/sui-node /usr/local/bin/
+sui-node -V
 
 # create sui service
 sudo tee /etc/systemd/system/suid.service > /dev/null <<EOF
