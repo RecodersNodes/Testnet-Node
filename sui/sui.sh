@@ -47,7 +47,6 @@ wget -O $HOME/.sui/genesis.blob  https://github.com/MystenLabs/sui-genesis/raw/m
 cp $HOME/sui/crates/sui-config/data/fullnode-template.yaml $HOME/.sui/fullnode.yaml
 sed -i.bak "s|db-path:.*|db-path: \"$HOME\/.sui\/db\"| ; s|genesis-file-location:.*|genesis-file-location: \"$HOME\/.sui\/genesis.blob\"| ; s|127.0.0.1|0.0.0.0|" $HOME/.sui/fullnode.yaml
 
-
 cargo build --release --bin sui-node
 mv ~/sui/target/release/sui-node /usr/local/bin/
 sui-node -V
