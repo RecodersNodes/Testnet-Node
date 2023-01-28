@@ -24,6 +24,7 @@ libssl-dev \
 libclang-dev \
 pkg-config \
 openssl \
+git \
 protobuf-compiler \
 cmake
 
@@ -49,7 +50,10 @@ sed -i.bak "s|db-path:.*|db-path: \"$HOME\/.sui\/db\"| ; s|genesis-file-location
 
 cargo build --release --bin sui-node
 mv ~/sui/target/release/sui-node /usr/local/bin/
+cargo build --release --bin sui
+mv ~/sui/target/release/sui /usr/local/bin/
 sui-node -V
+sui -V
 
 # create sui service
 sudo tee /etc/systemd/system/suid.service > /dev/null <<EOF
@@ -66,7 +70,14 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 
+
+sudo tee /etc/systemd/journald.conf >> /dev/null <<EOF
+Storage=persistent
+EOF
+
 # start sui node
 sudo systemctl daemon-reload
 sudo systemctl enable suid
 sudo systemctl restart suid
+
+echo -e "\e[1m\e[32m1. Sudah Terinstall... \e[0m"
