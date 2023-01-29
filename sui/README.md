@@ -1,3 +1,8 @@
+<h6> MINIMAL SPEK</h6>
+## RAM 32 GB
+## 10 vCPU
+## 1 TB Storage
+
 ## 1. Menginstall
 
 ## Install 
