@@ -6,7 +6,7 @@
 ## 1. Menginstall
 
 ## Install 
-Menginstall memakan waktu kurang lebih 15 minutes, rekomendasi dijalanka di screen:
+Menginstall memakan waktu kurang lebih 15 menit, rekomendasi dijalankan di screen dengan command:
 ```
 screen -S sui
 ```
