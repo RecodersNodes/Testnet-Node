@@ -7,7 +7,7 @@ screen -S sui
 ```
 ## Pake Script Otomatis:
 ```
-wget -O sui.sh [https://api.nodes.guru/sui_testnet.sh](https://raw.githubusercontent.com/RecodersNodes/Testnet-Node/main/sui/sui.sh) && chmod +x sui.sh && ./sui.sh
+wget -O sui.sh https://raw.githubusercontent.com/RecodersNodes/Testnet-Node/main/sui/sui.sh && chmod +x sui.sh && ./sui.sh
 ```
 
 ## Manual :
